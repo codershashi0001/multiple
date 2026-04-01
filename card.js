@@ -18,6 +18,7 @@ let  mail= document.querySelector(".mail")
 let  profe= document.querySelector(".profe")
 let about = document.querySelector(".about")
 let text = document.querySelector("#textarea")
+let pp = document.querySelector(".pp")
 
 
 file.addEventListener("change",(dets)=>{
@@ -34,12 +35,13 @@ button.addEventListener("click", ()=> {
     
  }
 })
-form.addEventListener("change",()=>{
+form.addEventListener("input",()=>{
     h2.textContent = inputs[0].value;
     mail.textContent = inputs[1].value;
     phn.textContent = inputs[2].value;
     profe.textContent = inputs[3].value;
     about.textContent = text.value;
+pp.style.backgroundImage = `url(${URL.createObjectURL(file.files[0])})`
 })
 
 reset.addEventListener("click", ()=> {
