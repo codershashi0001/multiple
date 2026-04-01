@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+
+.main, #main{
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+color: white;
+text-decoration: none;
+}
+
+#file {
+
+    color: white;
+    display: none;
+
+}
+
+#button1 , #butto{
+
+  background-color: red;
+    height: 50px;
+    width: 120px;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    border: 3px solid rgb(168, 23, 23);
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+#butto:hover{
+      background-color: rgb(79, 7, 7);
+
+}
+#button1:hover{
+      background-color: rgb(79, 7, 7);
+
+}
+
+h1{
+    color:white;
+}
+
+#outer{
+height: 1.5rem;
+background-color: rgba(114, 245, 114, 0.252);
+width: 15em;
+border-radius: 25px;
+}
+
+#inner{
+height: 1.5rem;
+background-color: rgb(43, 165, 43);
+width: 0%;
+border-radius: 500px;
+/* transition: all;
+    transition-duration: 10s;*/
+   transition-timing-function: linear; 
+}
+
+.download{
+    height: 2.5rem;
+    width: 7rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(96, 238, 77);
+    color: rgb(0, 0, 0);
+    border: 2px solid white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+cursor: pointer;
+
+}
+
+.delay{
+    transition: all;
+    transition-duration: 30s;
+   transition-timing-function: linear;
+    
+}
+
+
+.card{
+    background-color: black;
+    height: 12rem;
+    width: 35rem;
+    /* position: absolute; */
+   margin: 20px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   display: none;
+   
+}
+
+.form{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    width: 15%;
+    gap: 5px;
+    color: black;
+}
+
+.button, .reset{
+    width: 3rem;
+    display: inline;
+}
+
+.in{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.pp{
+height: 54px;
+width: 54px;
+border-radius: 50%;
+background-color: white;
+background-image: url(https://images.unsplash.com/photo-1774413768903-057eb084133b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+background-size: cover;
+background-repeat: no-repeat;
+margin: 10px;
+overflow: hidden;
+
+}
+
+.profe{
+    font-size: 16px;
+}
+
+.about{
+    margin-left: 12px;
+}
+
+.filename{
+    color: white;
+     margin-left: 12px;
+     margin-top: 10px;
+}
+
+
