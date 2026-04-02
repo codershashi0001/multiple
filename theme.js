@@ -2,7 +2,7 @@ let h1 = document.querySelector("h1")
 let btn = document.querySelector("#change")
 let main = document.querySelector(".main")
 let media = window.matchMedia("(prefers-color-scheme: dark)")
-
+let reset = document.querySelector("#reset")
 let currentTheme = media.matches ? "dark" : "light"
 
 
@@ -53,6 +53,12 @@ btn.addEventListener("click",()=>{
 btnn()
 
 })
+
+reset.addEventListener("click",()=>
+{
+    location.reload()
+})
+
 
 
 
