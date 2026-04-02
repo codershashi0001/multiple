@@ -1,13 +1,14 @@
 let h1 = document.querySelector("h1")
 let btn = document.querySelector("#change")
 let main = document.querySelector(".main")
-let isDark = window.matchMedia("(prefers-color-scheme: dark)")
+let media = window.matchMedia("(prefers-color-scheme: dark)")
+
+let currentTheme = media.matches ? "dark" : "light"
 
 
-
-
+  
 function theme(){
-    if (isDark.matches) {
+    if (currentTheme === "dark") {
         document.body.style.backgroundColor = "black"
         document.body.style.color = "white"
     } else {
@@ -19,28 +20,31 @@ function theme(){
 
 theme()
 
-isDark.addEventListener("change", (e) => {
+media.addEventListener("change", (e) => {
+        currentTheme = e.matches ? "dark" : "light"
+
 theme()
 }
 )
 
-let isLight = false
+
 
 function btnn(){
+    currentTheme = currentTheme === "dark" ? "light" : "dark"
+theme()
+    
+    // if (isLight){
 
-     isLight = !isLight
-    if (isLight){
-
-        h1.textContent = "Changed in light"
-        main.style.backgroundColor = "white"
-        h1.style.color = "black"
-    }
-    else {
-        h1.textContent = "Changed in dark"
-       main.style.backgroundColor = "black"
-       h1.style.color = "white"
+    //     h1.textContent = "Changed in light"
+    //     main.style.backgroundColor = "white"
+    //     h1.style.color = "black"
+    // }
+    // else {
+    //     h1.textContent = "Changed in dark"
+    //    main.style.backgroundColor = "black"
+    //    h1.style.color = "white"
       
-    }
+    // }
 }
 
 btn.addEventListener("click",()=>{
