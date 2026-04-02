@@ -4,12 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+.ball{
+    height: 10px;
+    width: 10px;
+    /* border-radius: 50px;
+    background-color: red; */
+    position: absolute;
+     background: gold;
+
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+}
+
+.main2{
+    background-color: black;
+    color: white;
+    height: 85px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 50%;
+    top: 42%;
+    position: absolute;
+}  
+.main{
+    display: none;
+}
+
+</style>
 
 </head>
 <body>
-    <div class="main">
-        <p>0</p>
-        <input type="button" value="generate">
-    </div>
+    <div class="main2">
+            <p>0</p>
+            <input type="button" value="generate" id="btn" >
+            </div>
+    <div class="main"> 
+        <div class="ball"></div>
+         </div>
+
+    <script src="./random.js"></script>
 </body>
 </html>
