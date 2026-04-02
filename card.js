@@ -4,12 +4,12 @@ let filename = document.querySelector(".filename")
 let button = document.querySelector(".button")
 let card = document.querySelector(".card")
 let reset = document.querySelector(".reset")
+let emailInput = document.querySelector("#email")
+// let emailvalue = emailInput.value
+let phoneinput = document.querySelector("#number")
+// let phonevalue = phoneinput.value
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^(\+91)?[6-9]\d{9}$/;
-let emailInput = document.querySelector("#email")
-let emailvalue = emailInput.value
-let phoneinput = document.querySelector("#number")
-let phonevalue = phoneinput.value
 let f ;
 let inputs = document.querySelectorAll("input")
 let h2 = document.querySelector("h2")
@@ -27,14 +27,31 @@ file.addEventListener("change",(dets)=>{
 })
 
 button.addEventListener("click", ()=> {
-    if (f === undefined){
+       let emailvalue = emailInput.value
+    let phonevalue = phoneinput.value
+
+    if (!emailRegex.test(emailvalue)) {
+        alert("Invalid Email ❌")
+        return
+    }
+
+    if (!phoneRegex.test(phonevalue)) {
+        alert("Invalid Phone ❌")
+        return
+    }
+
+     if (f === undefined){
         card.style.display = "none"
         
     }else {
     card.style.display = "block"
     
  }
+
+    // card.style.display = "block"
 })
+ 
+
 form.addEventListener("input",()=>{
     h2.textContent = inputs[0].value;
     mail.textContent = inputs[1].value;
