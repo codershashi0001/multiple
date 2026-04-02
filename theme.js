@@ -31,24 +31,26 @@ theme()
 
 function btnn(){
     currentTheme = currentTheme === "dark" ? "light" : "dark"
-theme()
-    
-    // if (isLight){
 
-    //     h1.textContent = "Changed in light"
-    //     main.style.backgroundColor = "white"
-    //     h1.style.color = "black"
-    // }
-    // else {
-    //     h1.textContent = "Changed in dark"
-    //    main.style.backgroundColor = "black"
-    //    h1.style.color = "white"
-      
-    // }
+if (currentTheme === "dark"){
+    
+    h1.textContent = "Changed in light"
+    main.style.backgroundColor = "white"
+    h1.style.color = "black"
+}
+else {
+    h1.textContent = "Changed in dark"
+    main.style.backgroundColor = "black"
+    h1.style.color = "white"
+    
+}
 }
 
 btn.addEventListener("click",()=>{
-     btnn()
+  
+
+
+btnn()
 
 })
 
